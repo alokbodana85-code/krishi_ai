@@ -14,12 +14,11 @@ from fastapi.middleware.cors import CORSMiddleware
 
 
 app = FastAPI(
-    title="Crop Recommendation API",
+    title="Krishi AI API API",
     version="3.0.0",
 )
 
 # For production, replace ["*"] with the URL of your frontend.
-from fastapi.middleware.cors import CORSMiddleware
 
 app.add_middleware(
     CORSMiddleware,
