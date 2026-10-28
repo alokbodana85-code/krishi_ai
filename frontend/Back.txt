@@ -1,0 +1,6 @@
+Backend
+cd backend
+venvScriptspython.exe main.py
+Frontend open a second terminal
+cd frontend
+npm run dev

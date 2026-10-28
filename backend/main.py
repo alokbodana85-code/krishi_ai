@@ -10,6 +10,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, ConfigDict, Field
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import LabelEncoder
+from fastapi.middleware.cors import CORSMiddleware
 
 
 app = FastAPI(
@@ -20,10 +21,10 @@ app = FastAPI(
 # For production, replace ["*"] with the URL of your frontend.
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://krishi-ai-nsp9.vercel.app/"],
     allow_credentials=False,
     allow_methods=["GET", "POST"],
-    allow_headers=["*"],
+    allow_headers=["https://krishi-ai-nsp9.vercel.app/"],
 )
 
 FEATURE_NAMES = (
