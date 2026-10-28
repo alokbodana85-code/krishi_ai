@@ -19,13 +19,19 @@ app = FastAPI(
 )
 
 # For production, replace ["*"] with the URL of your frontend.
+from fastapi.middleware.cors import CORSMiddleware
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://krishi-ai-gzw3.vercel.app"],
+    allow_origins=[
+        "https://krishi-ai-gzw3.vercel.app",
+        "http://localhost:3000",
+    ],
     allow_credentials=False,
-    allow_methods=["GET", "POST"],
-    allow_headers=["https://krishi-ai-gzw3.vercel.app"],
+    allow_methods=["GET", "POST", "OPTIONS"],
+    allow_headers=["*"],
 )
+
 
 FEATURE_NAMES = (
     "nitrogen",
