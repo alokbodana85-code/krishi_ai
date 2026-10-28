@@ -18,7 +18,7 @@ import {
   WifiOff,
 } from "lucide-react";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+const API_URL = "https://krishi-ai-1-2hds.onrender.com";
 
 type Preset = {
   name: string;
